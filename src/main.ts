@@ -25,6 +25,7 @@ const router = createRouter({
     linkActiveClass: "active"
 })
 
-app.use(router)
 app.use(vuetify)
+app.use(router)
+
 app.mount('#app')

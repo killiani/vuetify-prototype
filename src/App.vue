@@ -1,12 +1,14 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" app>
-      <v-list>
+    <v-navigation-drawer v-model="drawer" location="bottom" temporary>
+      <v-list density="compact" nav>
         <v-list-item v-for="(item, index) in items" :key="index" @click="navigateTo(item)">
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <router-link :to="item.route" exact-active-class="active">
+            <v-list-item-icon>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </router-link>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -49,3 +51,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .active {
+    color: red;
+  }
+</style>
