@@ -20,11 +20,16 @@
 
     <v-main>
       <router-view></router-view>
+      <r-footer></r-footer> <!-- render the Footer component -->
     </v-main>
+
+    
+
   </v-app>
 </template>
 
 <script lang="ts">
+import Footer from './components/Footer.vue';
 
 interface Item {
   title: string;
@@ -33,6 +38,12 @@ interface Item {
 }
 
 export default {
+
+  name: 'App',
+  components: {
+    'r-footer': Footer // register the Footer component
+  },
+
   data() {
     return {
       drawer: false,
