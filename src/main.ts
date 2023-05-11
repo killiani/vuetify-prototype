@@ -1,12 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
+import './style.scss'
 
 import { createRouter, createWebHashHistory } from "vue-router"
 
 import Main from './views/Main.vue'
 import Member from './views/Member.vue'
-import Contact from './views/Contact.vue'
+import Contact  from './views/Contact.vue'
 
 const app = createApp(App)
 

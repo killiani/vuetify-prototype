@@ -63,8 +63,4 @@ export default {
 }
 </script>
 
-<style>
-  .active {
-    color: red;
-  }
-</style>
+<style lang="scss" src="./style.scss"></style>

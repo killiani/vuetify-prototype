@@ -24,19 +24,19 @@
         </v-sheet>
 </template>
 
-<script>
+<script lang="ts">
 export default {
         data: () => ({
                 valid: false,
                 firstname: '',
                 lastname: '',
                 nameRules: [
-                        value => {
+(                        value: any) => {
                                 if (value) return true
 
                                 return 'Name is requred.'
                         },
-                        value => {
+(                        value: string | any[]) => {
                                 if (value?.length <= 10) return true
 
                                 return 'Name must be less than 10 characters.'
@@ -44,12 +44,12 @@ export default {
                 ],
                 email: '',
                 emailRules: [
-                        value => {
+(                        value: any) => {
                                 if (value) return true
 
                                 return 'E-mail is requred.'
                         },
-                        value => {
+(                        value: string) => {
                                 if (/.+@.+\..+/.test(value)) return true
 
                                 return 'E-mail must be valid.'
